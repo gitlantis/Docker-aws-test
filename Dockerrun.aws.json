@@ -22,8 +22,12 @@
       ],
       "environment": [
         {
-          "ASPNETCORE_ENVIRONMENT": "Development",
-          "ASPNETCORE_URLS": "http://+:5000"
+          "name": "ASPNETCORE_ENVIRONMENT",
+	  "value": "Development",
+	},
+	{
+          "name":"ASPNETCORE_URLS",
+   	  "value": "http://+:5000"
         }
       ]
     },
