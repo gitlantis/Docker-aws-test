@@ -13,6 +13,7 @@
       "name": "dotnet-app",
       "image": "mcr.microsoft.com/dotnet/samples:aspnetapp",
       "essential": true,
+      "memory": 500,
       "portMappings": [
         {
           "hostPort": 5000,
