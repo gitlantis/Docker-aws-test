@@ -1,0 +1,19 @@
+version: "3.4"
+
+services:
+  dotnet-app:
+    image: mcr.microsoft.com/dotnet/samples:aspnetapp
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./config:/etc/nginx/conf.d
+    ports:
+      - "80:80"
+    depends_on:
+      - dotnet-app
